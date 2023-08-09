@@ -1,7 +1,7 @@
-package com.demoqa.Pages;
+package com.demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.demoqa.Pages.components.CalendarComponent;
+import com.demoqa.pages.components.CalendarComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -30,6 +30,11 @@ public class RegistrationPage {
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
+
+
+        return this;
+    }
+    public RegistrationPage executeBanner() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
@@ -68,7 +73,7 @@ public class RegistrationPage {
 
     public RegistrationPage setBirthDate(String day, String month, String year) {
         birthDateInput.click();
-        calendar.setDate("08", "June", "1996");
+        calendar.setDate(day, month, year);
 
         return this;
     }

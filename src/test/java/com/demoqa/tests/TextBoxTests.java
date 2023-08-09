@@ -1,12 +1,7 @@
-package com.demoqa.Tests;
+package com.demoqa.tests;
 
-import com.demoqa.Pages.RegistrationPage;
-import org.junit.jupiter.api.AfterAll;
+import com.demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 
 public class TextBoxTests extends BaseTest {
 
@@ -16,7 +11,7 @@ public class TextBoxTests extends BaseTest {
     void fillFormTest() {
 
 
-        registrationPage.openPage().
+        registrationPage.openPage().executeBanner().
                 setFirstName("Sergey").
                 setLastName("Sergeev").
                 setUserEmail("SerjoSergeev@gmail.com").
