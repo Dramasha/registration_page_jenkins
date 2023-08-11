@@ -25,7 +25,8 @@ public class RegistrationPage {
             addressInput = $("#currentAddress"),
             stateInput = $("#state"),
             cityInput = $("#city"),
-            clickSubmit = $("#submit");
+            clickSubmit = $("#submit"),
+            checkResults = $(".table-responsive");
 
 
     public RegistrationPage openPage() {
@@ -71,9 +72,9 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setBirthDate(String day, String month, String year) {
+    public RegistrationPage setBirthDate(String dday, String mmonth, String yyear) {
         birthDateInput.click();
-        calendar.setDate(day, month, year);
+        calendar.setDate(dday, mmonth, yyear);
 
         return this;
     }
@@ -123,8 +124,8 @@ public class RegistrationPage {
     }
 
 
-    public RegistrationPage checkResult(String value) {
-        $(".table-responsive").shouldHave(text(value));
+    public RegistrationPage checkResult(String value, String check) {
+        checkResults.$(byText(value)).parent().shouldHave(text(check));
 
         return this;
     }
