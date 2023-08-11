@@ -4,7 +4,6 @@ import com.github.javafaker.Faker;
 
 import static com.demoqa.utils.TestDataProperties.faker;
 
-
 public class RandomUtils {
     public static String months;
     public static String state;
