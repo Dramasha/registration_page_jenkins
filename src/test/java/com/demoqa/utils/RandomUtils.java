@@ -5,8 +5,6 @@ import com.github.javafaker.Faker;
 import static com.demoqa.utils.TestDataProperties.faker;
 
 public class RandomUtils {
-    public static String months;
-    public static String state;
 
     public static String getRandomFirstName() {
 
@@ -32,27 +30,16 @@ public class RandomUtils {
 
     public static String getRandomNumber() {
 
-        return faker.phoneNumber().phoneNumber();
+        return faker.numerify("##########");
     }
-
-
     public static String getRandomMonth() {
-        String[] randomMonth = {
-                "January", "February", "March", "April",
-                "May", "June", "July", "August",
-                "September", "October", "November", "December"
-        };
-
-        return faker.options().option(randomMonth);
+        String[] months = {"January", "March", "May", "July", "August", "October",
+                "December", "February", "April", "June", "September", "November"};
+        return faker.options().option(months);
     }
 
-    public static String getRandomYear() {
-
-        return faker.random().nextInt(1950, 2005).toString();
-    }
-
-    public static String getRandomDay(String months) {
-        switch (months) {
+    public static String getRandomDay(String randomMonth) {
+        switch (randomMonth) {
             case "January":
 
             case "March":
@@ -67,14 +54,14 @@ public class RandomUtils {
 
 
             case "December": {
-                String[] randomDay = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+                String[] randomDay = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
                         "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
                         "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"};
                 return faker.options().option(randomDay);
             }
 
             case "February": {
-                String[] randomDay = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+                String[] randomDay = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
                         "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
                         "21", "22", "23", "24", "25", "26", "27", "28"};
                 return faker.options().option(randomDay);
@@ -95,6 +82,14 @@ public class RandomUtils {
         }
         return null;
     }
+
+
+
+    public static String getRandomYear() {
+
+        return faker.random().nextInt(1950, 2005).toString();
+    }
+
 
     public static String getRandomSubject() {
         String[] subjects = {

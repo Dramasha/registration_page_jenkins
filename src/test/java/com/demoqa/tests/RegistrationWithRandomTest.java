@@ -18,26 +18,26 @@ public class RegistrationWithRandomTest extends BaseTest {
                 setUserEmail(eMailAdd).
                 setGender(gengerAdd).
                 setNumber(numberPhoneAdd).
-                setBirthDate(monthAdd, yearAdd, dayAdd).
+                setBirthDate(randomMonth, dayAdd, yearAdd).
                 setSubject(subjectAdd).
                 setHobbies(hobbiesAdd).
                 addPicture(picturesAdd).
                 setAddress(addressAdd).
-                setState(stateAdd).
+                setState(state).
                 setCity(cityAdd).
                 clickBottom();
 
         registrationPage.
-                checkResult("Full Name", firstNameAdd + " " + lastNameAdd).
-                checkResult("Email", eMailAdd).
+                checkResult("Student Name", firstNameAdd + " " + lastNameAdd).
+                checkResult("Student Email", eMailAdd).
                 checkResult("Gender", gengerAdd).
-                checkResult("Number phone", numberPhoneAdd).
-                checkResult("BirthDay", monthAdd + " " + yearAdd + " " + dayAdd).
+                checkResult("Mobile", numberPhoneAdd).
+                checkResult("Date of Birth", dayAdd + " " + randomMonth + " " + yearAdd ).
                 checkResult("Subjects", subjectAdd).
                 checkResult("Hobbies", hobbiesAdd).
-                checkResult("Pictures", picturesAdd).
+                checkResult("Picture", picturesAdd).
                 checkResult("Address", addressAdd).
-                checkResult("State and City", stateAdd + " " + cityAdd);
+                checkResult("State and City", state + " " + cityAdd);
     }
 
 }

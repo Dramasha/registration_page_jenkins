@@ -16,14 +16,14 @@ public class TestDataProperties {
             eMailAdd = getRandomEmail(),
             gengerAdd = getRandomGender(),
             numberPhoneAdd = getRandomNumber(),
-            monthAdd = getRandomMonth(),
+            randomMonth = getRandomMonth(),
+            dayAdd = getRandomDay(randomMonth),
             yearAdd = getRandomYear(),
-            dayAdd = getRandomDay(months),
             subjectAdd = getRandomSubject(),
             hobbiesAdd = getRandomHobbies(),
             picturesAdd = "multipass.jpg",
             addressAdd = getRandomAddress(),
-            stateAdd = getRandomState(),
+            state = getRandomState(),
             cityAdd = getRandomCity(state);
 
 
