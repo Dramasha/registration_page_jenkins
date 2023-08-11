@@ -40,20 +40,8 @@ public class RandomUtils {
 
     public static String getRandomDay(String randomMonth) {
         switch (randomMonth) {
-            case "January":
-
-            case "March":
-
-            case "May":
-
-            case "July":
-
-            case "August":
-
-            case "October":
-
-
-            case "December": {
+            case "January": case "March": case "May": case "July":
+                case "August": case "October": case "December": {
                 String[] randomDay = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
                         "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
                         "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"};
@@ -67,13 +55,7 @@ public class RandomUtils {
                 return faker.options().option(randomDay);
             }
 
-            case "April":
-
-            case "June":
-
-            case "September":
-
-            case "November": {
+            case "April": case "June": case "September": case "November": {
                 String[] randomDay = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
                         "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
                         "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"};
@@ -82,14 +64,10 @@ public class RandomUtils {
         }
         return null;
     }
-
-
-
     public static String getRandomYear() {
 
         return faker.random().nextInt(1950, 2005).toString();
     }
-
 
     public static String getRandomSubject() {
         String[] subjects = {
@@ -107,7 +85,6 @@ public class RandomUtils {
                 "Sports", "Reading", "Music"
         };
         return faker.options().option(hobbies);
-
     }
 
     public static String getRandomAddress() {
@@ -119,7 +96,6 @@ public class RandomUtils {
                 "NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
         return faker.options().option(states);
         }
-
 
     public static String getRandomCity(String state) {
         switch (state) {
@@ -143,8 +119,4 @@ public class RandomUtils {
         return null;
 
     }
-
-
-
-
-}
+    }
