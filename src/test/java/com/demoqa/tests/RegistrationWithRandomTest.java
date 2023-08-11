@@ -32,7 +32,7 @@ public class RegistrationWithRandomTest extends BaseTest {
                 checkResult("Student Email", eMailAdd).
                 checkResult("Gender", gengerAdd).
                 checkResult("Mobile", numberPhoneAdd).
-                checkResult("Date of Birth", dayAdd + " " + randomMonth + " " + yearAdd ).
+                checkResult("Date of Birth", dayAdd + " " + randomMonth + "," + yearAdd ).
                 checkResult("Subjects", subjectAdd).
                 checkResult("Hobbies", hobbiesAdd).
                 checkResult("Picture", picturesAdd).
