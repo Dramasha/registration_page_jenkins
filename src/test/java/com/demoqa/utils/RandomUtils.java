@@ -26,8 +26,8 @@ public class RandomUtils {
 
     public static String getRandomNumber() {
         return faker.numerify("##########");
-
     }
+
     public static String getRandomMonth() {
         String[] months = {"January", "March", "May", "July", "August", "October",
                 "December", "February", "April", "June", "September", "November"};
