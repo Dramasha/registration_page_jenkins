@@ -25,11 +25,4 @@ public class TestDataProperties {
             addressAdd = getRandomAddress(),
             state = getRandomState(),
             cityAdd = getRandomCity(state);
-
-
-
-
-
-
-
 }

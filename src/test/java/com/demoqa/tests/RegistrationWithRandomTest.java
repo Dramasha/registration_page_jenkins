@@ -10,8 +10,6 @@ public class RegistrationWithRandomTest extends BaseTest {
 
     @Test
     void fakerFillFormTest() {
-
-
         registrationPage.openPage().executeBanner().
                 setFirstName(firstNameAdd).
                 setLastName(lastNameAdd).
@@ -39,5 +37,4 @@ public class RegistrationWithRandomTest extends BaseTest {
                 checkResult("Address", addressAdd).
                 checkResult("State and City", state + " " + cityAdd);
     }
-
 }
