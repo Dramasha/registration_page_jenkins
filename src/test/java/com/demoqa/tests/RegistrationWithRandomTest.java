@@ -2,6 +2,7 @@ package com.demoqa.tests;
 
 import com.demoqa.pages.RegistrationPage;
 import io.qameta.allure.Step;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.demoqa.utils.TestDataProperties.*;
@@ -11,6 +12,7 @@ public class RegistrationWithRandomTest extends BaseTest {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
+    @Tag("remote")
     void fakerFillFormTest() {
         step("Отрытие страницы", () -> {
         registrationPage.openPage().executeBanner();
