@@ -1,7 +1,6 @@
 package com.demoqa.tests;
 
 import com.demoqa.pages.RegistrationPage;
-import io.qameta.allure.Step;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
